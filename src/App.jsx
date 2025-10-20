@@ -7,6 +7,8 @@ import Booking from "./Pages/Booking";
 import Login from "./Pages/Login";
 import Events from "./Pages/Events";
 import Register from "./Pages/Register";
+import Resort from "./Pages/Resort";
+import LakeHouse from "./Pages/LakeHouse";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/apartment" element={<Apartment />} />
+          <Route path="/resort" element={<Resort />} />
+          <Route path="/lake-house" element={<LakeHouse />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

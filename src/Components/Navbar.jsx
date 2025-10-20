@@ -7,7 +7,7 @@ export default function Navbar () {
         <div>
             <Link to="/" className='text-3xl'>Rentora</Link>
         </div>
-        <div className='hidden md:flex gap-10 text-xs font-bold tracking-wide uppercase items-center justify-center'>
+        <div className='hidden md:flex gap-10 text-xs font-bold tracking-wider uppercase items-center justify-center'>
             <Link to="/booking">Book now</Link>
             <Link to="/apartment">Apartments</Link>
             <Link to="/events">Events</Link>

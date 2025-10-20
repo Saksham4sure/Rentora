@@ -1,9 +1,11 @@
-import React from 'react'
+import apartmentPage from "../assets/images/apartment-page.jpg";
 
 const Apartment = () => {
   return (
-    <div>Apartment</div>
-  )
-}
+    <div>
+      <img className="object-cover absolute " src={apartmentPage} />
+    </div>
+  );
+};
 
-export default Apartment
+export default Apartment;
