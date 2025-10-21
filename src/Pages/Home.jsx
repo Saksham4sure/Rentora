@@ -22,13 +22,13 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // const nextSlide = () => {
-  //   setHeroCount((count) => (count === totalSlide - 1 ? 0 : count + 1));
-  // };
+  const nextSlide = () => {
+    setHeroCount((count) => (count === totalSlide - 1 ? 0 : count + 1));
+  };
 
-  // const previousSlide = () => {
-  //   setHeroCount((count) => (count === 0 ? totalSlide - 1 : count - 1));
-  // };
+  const previousSlide = () => {
+    setHeroCount((count) => (count === 0 ? totalSlide - 1 : count - 1));
+  };
 
   return (
     <>
@@ -48,23 +48,27 @@ const Home = () => {
             heroCount={heroCount}
           />
           <HomeSliderData
-            className="absolute top-[20%] left-[5%]"
+            className="absolute top-[20%] left-[5%] "
             homeSliderData={homeSliderData[heroCount]}
             heroCount={heroCount}
             setHeroCount={setHeroCount}
           />
-          {/* <button
-            className="z-10 absolute right-0 h-full w-[20%] flex items-center justify-end md:px-10"
+          <button
+            className="z-10 absolute right-0 h-full w-[20%] flex items-center justify-end md:px-10 "
             onClick={nextSlide}
           >
-            <i class="ri-arrow-right-long-line text-3xl text-[#00ADB5] hidden md:flex"></i>
+            <div className="w-[50%] h-[12%] backdrop-blur-sm justify-center items-center rounded-full overflow-hidden hidden md:flex">
+              <i class="ri-arrow-right-long-line text-3xl text-[#949494]"></i>
+            </div>
           </button>
           <button
             className="z-10 absolute left-0 h-full w-[20%] flex items-center justify-start md:px-10"
             onClick={previousSlide}
           >
-            <i class="ri-arrow-left-long-line text-3xl text-[#00ADB5] hidden md:flex"></i>
-          </button> */}
+            <div className="w-[50%] h-[15%] backdrop-blur-sm justify-center items-center rounded-full overflow-hidden hidden md:flex">
+              <i class="ri-arrow-left-long-line text-3xl text-[#949494] "></i>
+            </div>
+          </button>
           <Link
             className="bg-[#222222] text-[#D0D0D0] z-50 absolute h-[50px] w-[50px] text-xs md:text-sm md:h-[70px] md:w-[70px] flex items-center justify-center right-4 bottom-10 rounded-full text-center"
             to="/booking"
@@ -111,6 +115,9 @@ const Home = () => {
       <div className="py-16 md:py-20 px-10">
         <div>
           <h1 className="text-3xl md:text-5xl cursor-default">Offerings and Perks</h1>
+        </div>
+        <div>
+
         </div>
       </div>
     </>
