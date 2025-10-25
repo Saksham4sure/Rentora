@@ -3,8 +3,8 @@ const HomeSliderData = ({heroCount, setHeroCount, homeSliderData, className}) =>
   return (
     <div className={className}>
         <div className="flex flex-col gap-1">
-            <p className="text-4xl md:text-6xl text-[#303030]">{homeSliderData.title}</p>
-            <p className="text-sm pl-1 text-[#303030]">{homeSliderData.desc}</p>
+            <p className="text-4xl md:text-6xl text-[#222222]">{homeSliderData.title}</p>
+            <p className="text-sm pl-1 text-[#222222]">{homeSliderData.desc}</p>
         </div>
         <div>
             <ul className="flex gap-1 pt-4">

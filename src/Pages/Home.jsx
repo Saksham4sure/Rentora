@@ -6,11 +6,12 @@ import { Link } from "react-router";
 import resortPage from '../assets/images/resort-page.jpg'
 import apartmentPage from '../assets/images/apartment-page.jpg'
 import lakeHousePage from '../assets/images/lakehouse-page.jpg'
+import Offerings from "../Components/Offerings";
 
 
 const Home = () => {
   const [heroCount, setHeroCount] = useState(0);
-  // const totalSlide = homeSliderData.length;
+  const totalSlide = homeSliderData.length;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,9 +43,9 @@ const Home = () => {
             quality homes built around comfort, safety, and peace.
           </p>
         </div>
-        <div className="relative h-[50vh] md:h-[100vh]">
+        <div className="relative h-[50vh] md:h-[100vh] bg-black rounded-2xl">
           <HomeSlider
-            className="absolute flex object-cover h-full w-full left-0 rounded-2xl"
+            className="absolute flex object-cover opacity-80 h-full w-full left-0 rounded-2xl"
             heroCount={heroCount}
           />
           <HomeSliderData
@@ -57,16 +58,16 @@ const Home = () => {
             className="z-10 absolute right-0 h-full w-[20%] flex items-center justify-end md:px-10 "
             onClick={nextSlide}
           >
-            <div className="w-[50%] h-[12%] backdrop-blur-sm justify-center items-center rounded-full overflow-hidden hidden md:flex">
-              <i class="ri-arrow-right-long-line text-3xl text-[#949494]"></i>
+            <div className="w-[50%] h-[12%] hidden md:flex">
+              <i class="ri-arrow-right-long-line text-3xl text-[#222222]"></i>
             </div>
           </button>
           <button
             className="z-10 absolute left-0 h-full w-[20%] flex items-center justify-start md:px-10"
             onClick={previousSlide}
           >
-            <div className="w-[50%] h-[15%] backdrop-blur-sm justify-center items-center rounded-full overflow-hidden hidden md:flex">
-              <i class="ri-arrow-left-long-line text-3xl text-[#949494] "></i>
+            <div className="w-[50%] h-[12%] hidden md:flex">
+              <i class="ri-arrow-left-long-line text-3xl text-[#222222] "></i>
             </div>
           </button>
           <Link
@@ -116,8 +117,8 @@ const Home = () => {
         <div>
           <h1 className="text-3xl md:text-5xl cursor-default">Offerings and Perks</h1>
         </div>
-        <div>
-
+        <div className="pt-10 w-full">
+          <Offerings className="flex flex-col items-center justify-center text-center w-[30vw] md:w-[150px] h-[150px] md:h-[180px] cursor-default gap-5" />
         </div>
       </div>
     </>

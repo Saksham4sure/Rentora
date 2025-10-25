@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 export default function Navbar () {
   return (
     <>
-    <div className='flex w-screen items-center justify-between px-16 py-5 fixed z-50'>
+    <div className='flex w-screen items-center justify-between px-16 py-5 fixed z-[999] bg-[#ffffff]'>
         <div>
             <Link to="/" className='text-3xl'>Rentora</Link>
         </div>
